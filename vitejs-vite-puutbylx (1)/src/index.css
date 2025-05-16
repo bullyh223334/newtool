@@ -1,0 +1,17 @@
+/* src/index.css (or your global stylesheet) */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Basic resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Add other global resets or base styles here */

@@ -1,0 +1,1 @@
+// Placeholder for quote data if needed

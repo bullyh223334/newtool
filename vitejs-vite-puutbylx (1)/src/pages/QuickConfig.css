@@ -1,0 +1,126 @@
+.quick-config-page {
+  font-family: sans-serif;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+.header-bar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.header-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.inputs-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.config-box {
+  margin-top: 20px;
+}
+.config-box h4 {
+  margin-bottom: 10px;
+}
+.inputs-panel label {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.inputs-panel input,
+.inputs-panel select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.inputs-panel input[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.overview-panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.config-summary {
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+.overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.overview-table th,
+.overview-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.overview-table th {
+  background-color: #f2f2f2;
+}
+.controller-summary-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.controller-summary-list li {
+  margin-bottom: 5px;
+}
+.quote-preview-section {
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.quote-preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.quote-preview-table th,
+.quote-preview-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.quote-preview-table th {
+  background-color: #f2f2f2;
+}
+.floating-save {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+.floating-save button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.floating-save button:hover {
+  background-color: #0056b3;
+}
+.floating-save button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

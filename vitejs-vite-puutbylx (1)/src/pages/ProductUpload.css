@@ -1,0 +1,29 @@
+/* src/pages/ProductUpload.css */
+.product-upload-page {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.drop-zone {
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px dashed #888;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.drop-zone.drag-over {
+  background-color: #e3f2fd;
+  border-color: #4285f4;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}

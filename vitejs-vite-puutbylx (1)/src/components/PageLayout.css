@@ -1,0 +1,17 @@
+.page-subheader {
+  padding: 20px 30px 10px;
+  background-color: #f6f9fc;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-subheader h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00365f;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.page-body {
+  padding: 30px;
+}

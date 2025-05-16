@@ -1,0 +1,66 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { QuotesProvider } from "./context/QuotesContext";
+import Dashboard from "./pages/Dashboard";
+import CreateQuote from "./pages/CreateQuote";
+import EditQuote from "./pages/EditQuote";
+import QuickConfig from "./pages/QuickConfig";
+import NewQuote from "./pages/NewQuote";
+import ProductManager from "./pages/ProductManager"; 
+import UserManagement from "./pages/UserManagement";
+import Users from "./pages/Users";
+
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Dashboard />}/>
+    <Route path="/create" element={<CreateQuote />}/>
+    <Route path="/edit/:quoteId" element={<EditQuote />} />
+    <Route path="/quick" element={<QuickConfig />} />
+    <Route path="/new" element={<NewQuote />} />
+    <Route path="/products" element={<ProductManager />} /> {/* ⬅️ Add route */}
+    <Route path="/product-manager" element={<ProductManager />} />
+    <Route path="/users" element={<UserManagement />} />
+    <Route path="/users" element={<Users />} />
+    {/* ...other routes... */}
+  </Routes>
+</BrowserRouter>
+
+
+
+
+export default function App() {
+  return (
+    <QuotesProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/create" element={<CreateQuote />} />
+          <Route path="/edit/:quoteId" element={<EditQuote />} />
+          <Route path="/quick" element={<QuickConfig />} />
+          <Route path="/new" element={<NewQuote />} />
+          <Route path="/products" element={<ProductManager />} /> {/* ⬅️ Add route */}
+          <Route path="/product-manager" element={<ProductManager />} />
+          <Route path="/users" element={<UserManagement />} />
+          <Route path="/users" element={<Users />} />
+        </Routes>
+      </Router>
+    </QuotesProvider>
+  );
+}
+
+
+
+
+
+
+
+
+VITE CONFIG
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+});

@@ -1,0 +1,20 @@
+.global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background-color: #00365f;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header-left {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-right {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.9;
+}

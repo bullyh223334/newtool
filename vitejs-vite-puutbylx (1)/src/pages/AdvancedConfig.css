@@ -1,0 +1,132 @@
+/* src/pages/AdvancedConfig.css */
+/* Includes base styles shared with other quote pages */
+
+/* ======================================== */
+/* Base Styles (Shared)             */
+/* ======================================== */
+button { font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 4px; border: none; padding: 8px 15px; font-size: 0.9em; transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; }
+button:disabled { background-color: #cccccc !important; color: #666666 !important; cursor: not-allowed; opacity: 0.7; }
+input[type="text"], input[type="number"], select { width: calc(100% - 22px); padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Poppins', sans-serif; font-size: 14px; margin-top: 5px; box-sizing: border-box; }
+input:focus, select:focus { border-color: #80bdff; outline: 0; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+input:disabled, select:disabled { background-color: #f0f0f0 !important; cursor: not-allowed; opacity: 0.7; }
+
+/* ======================================== */
+/* Header Bar (Shared)              */
+/* ======================================== */
+.header-bar { background-color: #002C5F; color: white; padding: 16px 30px; display: flex; align-items: center; }
+.header-logo { height: 35px; width: auto; display: block; margin-right: 15px; flex-shrink: 0; }
+.header-title { font-size: 22px; font-weight: 600; color: white; margin: 0; flex-grow: 1; text-align: center; padding: 0 15px; }
+.header-spacer { width: 50px; /* Approx logo width + margin */ flex-shrink: 0; } /* Adjust width if needed */
+
+/* Currency Toggle (Shared) */
+.currency-toggle { display: flex; margin-left: auto; border: 1px solid #B19E5F; border-radius: 5px; overflow: hidden; }
+.currency-toggle button { background-color: transparent; color: #fff; border: none; padding: 6px 12px; cursor: pointer; font-size: 1em; font-weight: 600; transition: background-color 0.2s ease, color 0.2s ease; line-height: 1; }
+.currency-toggle button:hover { background-color: rgba(255, 255, 255, 0.1); }
+.currency-toggle button.active { background-color: #B19E5F; color: #002C5F; }
+
+/* ======================================== */
+/* Advanced Config Page Layout & Panels */
+/* ======================================== */
+.advanced-config-page { /* Styles applied globally via body/index.css */ padding-bottom: 80px; }
+.advanced-config-layout { display: grid; grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr); gap: 30px; padding: 0 30px; margin-bottom: 30px; align-items: start; }
+.panel { background: #fff; border: 1px solid #dce3ea; border-left: 5px solid #B19E5F; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0, 44, 95, 0.08); transition: box-shadow 0.3s ease; }
+.panel h3, .panel h4 { font-size: 18px; font-weight: 600; color: #002C5F; margin-top: 0; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #f1f3f5; display: flex; align-items: center; gap: 10px; }
+.panel h3 svg { color: #002C5F; } .panel h4 { border-bottom: none; margin-bottom: 10px; font-size: 16px; }
+.panel label { font-size: 14px; font-weight: 500; display: block; margin: 10px 0 5px; color: #343a40; }
+.panel label svg { margin-right: 6px; color: #6c757d; vertical-align: middle; }
+
+.config-inputs .add-site-section { margin-top: 25px; padding-top: 20px; border-top: 1px dashed #e9ecef; }
+.config-inputs .add-site-section button { background-color: #28a745; color: white; }
+.config-inputs .add-site-section button:hover:not(:disabled) { background-color: #218838; }
+
+.resource-summary-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+.resource-summary-table th, .resource-summary-table td { border: 1px solid #e9ecef; padding: 10px 8px; text-align: left; vertical-align: middle; }
+.resource-summary-table th { background-color: #f8f9fa; font-weight: 600; color: #002C5F; }
+.resource-summary-table td:nth-child(n+2) { text-align: center; }
+.status-indicator.ok svg { color: #28a745; } .status-indicator.deficient svg { color: #ffc107; }
+.controller-count-list { list-style: none; padding: 0; column-count: 2; column-gap: 20px; font-size: 14px; }
+.controller-count-list li { margin-bottom: 6px; color: #002C5F; }
+
+/* ======================================== */
+/* Site Containers & Structure Area    */
+/* ======================================== */
+.site-containers-area { padding: 0 30px; margin-top: 10px; }
+.site-containers-area h3 { margin-top: 0; border-bottom: 1px solid #e9ecef; padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; font-size: 1.4em; font-weight: 600; color: #002C5F; }
+.site-containers-area h3 svg { color: #002C5F; }
+.site-container { margin-bottom: 30px; /* Inherits .panel styling */ }
+.site-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e9ecef; padding-bottom: 15px; margin-bottom: 20px; }
+.site-header h4 { margin: 0; display: flex; align-items: center; gap: 10px; font-size: 1.25em; font-weight: 600; color: #002C5F; border: none; padding: 0; }
+.site-header h4 svg { color: #002C5F; }
+.add-site-controller-buttons { display: flex; align-items: center; gap: 10px; }
+.add-site-controller-buttons span { font-size: 0.9em; color: #6c757d; }
+.add-site-controller-buttons button { padding: 6px 12px; font-size: 0.85em; background-color: #007bff; color: white; }
+.add-site-controller-buttons button:hover:not(:disabled) { background-color: #0056b3; }
+.delete-site-btn { background: none; border: none; color: #dc3545; cursor: pointer; font-size: 0.9em; padding: 5px; margin-left: 15px; }
+.delete-site-btn:hover { color: #a71d2a; }
+.no-controllers-message, .no-sites-message { text-align: center; padding: 25px; color: #6c757d; font-style: italic; background-color: #f8f9fa; border-radius: 6px; margin-top: 10px; }
+
+/* ======================================== */
+/* Controller Visual Styling        */
+/* ======================================== */
+.controller-container { border: 1px solid #dce3ea; border-radius: 8px; margin-bottom: 20px; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 44, 95, 0.05); overflow: hidden; }
+.dependent-controller-container { margin-left: 30px; border-color: #e9ecef; }
+.controller-header { display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; padding: 10px 15px; border-bottom: 1px solid #e9ecef; transition: background-color 0.2s ease; }
+.controller-header.clickable { cursor: pointer; }
+.controller-header.clickable:hover { background-color: #eef2f7; }
+.controller-title { font-weight: 600; display: flex; align-items: center; gap: 8px; flex-grow: 1; color: #002C5F; font-size: 1.05em; }
+.controller-title svg { color: #002C5F; }
+.collapse-icon { display: inline-flex; align-items: center; margin-right: 8px; color: #6c757d; font-size: 0.9em; }
+.door-summary { font-size: 0.85em; font-weight: 400; color: #6c757d; margin-left: 10px; white-space: nowrap; }
+.controller-status-box { display: flex; gap: 12px; font-size: 0.8em; background-color: #e9ecef; padding: 5px 10px; border-radius: 3px; border: 1px solid #dee2e6; margin-left: 15px; white-space: nowrap; color: #495057; }
+.delete-controller-btn { background: none; border: none; color: #dc3545; cursor: pointer; font-size: 1em; padding: 5px; margin-left: 10px; }
+.delete-controller-btn:hover { color: #a71d2a; }
+.controller-body { padding: 20px; }
+.no-doors-message { font-size: 0.9em; color: #6c757d; text-align: center; padding: 10px 0; }
+
+/* ======================================== */
+/* Door Configurator Styling        */
+/* ======================================== */
+.door-config-box { border: 1px solid #dce3ea; border-radius: 6px; margin-bottom: 15px; background-color: #fff; overflow: hidden; transition: all 0.3s ease; position: relative; }
+.door-config-box.disabled:not(.disabled-by-rule) { border-style: dashed; opacity: 0.7; }
+.door-config-box.disabled-by-rule { background-color: #f8f9fa; border-color: #e9ecef; }
+.door-config-box.disabled-by-rule .config-select, .door-config-box.disabled-by-rule .enable-disable-btn { cursor: not-allowed; }
+.rule-disable-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(248, 249, 250, 0.8); display: flex; align-items: center; justify-content: center; color: #6c757d; font-weight: 500; z-index: 1; text-align: center; padding: 10px; gap: 8px; font-size: 0.9em; }
+.rule-disable-overlay svg { color: #6c757d; }
+.door-header { display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; padding: 8px 15px; border-bottom: 1px solid #e9ecef; }
+.door-title { font-weight: 600; display: flex; align-items: center; gap: 8px; color: #002C5F;}
+.door-title svg { color: #007bff; } .door-config-box.disabled .door-title svg { color: #adb5bd; }
+.enable-disable-btn { padding: 5px 10px; font-size: 0.8em; cursor: pointer; border-radius: 4px; font-weight: 500; border: 1px solid transparent; }
+.enable-disable-btn.enabled { background-color: #B19E5F; color: #002C5F; border-color: #9e8a4f; } /* Gold */
+.enable-disable-btn.enabled:hover { background-color: #9e8a4f; color: white; }
+.enable-disable-btn.disabled { background-color: #28a745; color: white; border-color: #1e7e34; } /* Green */
+.enable-disable-btn.disabled:hover { background-color: #218838; }
+.enable-disable-btn:disabled { background-color: #e9ecef !important; border-color: #ced4da !important; color: #6c757d !important; cursor: not-allowed; opacity: 0.65; }
+.door-config-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px 20px; padding: 20px; }
+.door-config-grid label { font-size: 13px; display: flex; flex-direction: column; gap: 5px; color: #495057; font-weight: 500; }
+.door-config-grid label svg { color: #6c757d; vertical-align: middle; margin-right: 4px;}
+.config-select { width: 100%; /* Use base input styles */ }
+
+/* ======================================== */
+/* Dependent Controller Area          */
+/* ======================================== */
+.dependent-controllers-area { padding: 20px; margin-top: 0; border-top: 1px solid #e9ecef; margin-left: 0; margin-right: 0; background-color: #fdfdff; border-radius: 0 0 8px 8px; }
+.dependent-title { margin-top: 0; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; color: #002C5F; font-weight: 600; font-size: 1.05em; }
+.dependent-title svg { color: #002C5F; }
+.add-dependent-controller { margin-top: 20px; padding-top: 20px; border-top: 1px dashed #e9ecef; }
+.add-dependent-controller select { min-width: 200px; /* Use base select styles */ }
+.limit-reached-text { font-style: italic; color: #6c757d; font-size: 0.9em; text-align: center; padding: 15px; margin-top: 10px; background-color: #f8f9fa; border-radius: 4px; }
+option[disabled] { color: #999; background-color: #f0f0f0;}
+
+/* ======================================== */
+/* Floating Save Bar (Shared)       */
+/* ======================================== */
+.floating-bar { position: fixed; bottom: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.95); padding: 10px 30px; border-top: 1px solid #dee2e6; box-shadow: 0 -2px 8px rgba(0, 44, 95, 0.1); text-align: right; z-index: 1000; }
+.floating-bar button { background-color: #002C5F; color: white; padding: 12px 25px; font-size: 14px; font-weight: 600; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: background 0.3s ease, color 0.3s ease; margin-left: 10px; /* Add space between buttons if multiple */ }
+.floating-bar button:hover:not(:disabled) { background-color: #B19E5F; color: #002C5F; }
+/* Ensure base disabled styles apply */
+
+/* ======================================== */
+/* Error Message Styling (Shared)     */
+/* ======================================== */
+.error-message { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px 15px; border-radius: 4px; margin-top: 10px; font-size: 0.9em; }
+.success-message { color: #155724; background-color: #d4edda; border-color: #c3e6cb; padding: 10px 15px; border-radius: 4px; margin-top: 10px; font-size: 0.9em;}

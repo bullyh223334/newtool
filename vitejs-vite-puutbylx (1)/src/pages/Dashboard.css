@@ -1,0 +1,199 @@
+.dashboard-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e9ecef 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-page h1 {
+  font-size: 2.5em;
+  color: #1a3c61;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.actions .action-btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.actions .action-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.actions .action-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.actions .quick-quote-btn {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #e6f0fa;
+  color: #007bff;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.actions .quick-quote-btn:hover {
+  background-color: #d0e2f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.actions .quick-quote-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.quotes-section,
+.sales-contacts-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-section h2,
+.sales-contacts-section h2 {
+  font-size: 1.8em;
+  color: #1a3c61;
+  margin-bottom: 20px;
+}
+
+.no-data {
+  font-size: 1.2em;
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+.quotes-table,
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quotes-table th,
+.quotes-table td,
+.contacts-table th,
+.contacts-table td {
+  border: 1px solid #e9ecef;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+.quotes-table th,
+.contacts-table th {
+  background-color: #f8f9fa;
+  color: #1a3c61;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.quotes-table td,
+.contacts-table td {
+  color: #343a40;
+}
+
+.quotes-table td a,
+.contacts-table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.quotes-table td a:hover,
+.contacts-table td a:hover {
+  text-decoration: underline;
+}
+
+.quotes-table .edit-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.quotes-table .edit-btn:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 20px;
+  }
+
+  .dashboard-page h1 {
+    font-size: 2em;
+  }
+
+  .actions {
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions .action-btn,
+  .actions .quick-quote-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .quotes-table,
+  .contacts-table {
+    font-size: 0.85em;
+  }
+
+  .quotes-table th,
+  .quotes-table td,
+  .contacts-table th,
+  .contacts-table td {
+    padding: 10px;
+  }
+}

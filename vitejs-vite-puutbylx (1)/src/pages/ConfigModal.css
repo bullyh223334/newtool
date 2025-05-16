@@ -1,0 +1,22 @@
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+.modal-window{
+  background:#fff;
+  border-radius:8px;
+  padding:25px;
+  min-width:320px;
+  max-width:430px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.modal-section{margin:18px 0}
+.modal-section label{display:block;margin-top:6px}
+.modal-section .disabled{opacity:.5}
+.modal-actions{text-align:right;margin-top:20px}
+.modal-actions .cancel{margin-left:10px;background:#ccc}
